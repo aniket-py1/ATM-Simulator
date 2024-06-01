@@ -3,48 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Simulator</title>
+  <link rel="icon" href="./img/image.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
-        <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-          <h1 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">ATM Simulator</h1>
-          <div class="space-y-4">
-            <div class="flex items-center space-x-2">
-              <label for="amount" class="text-gray-700 dark:text-gray-300">
-                Enter Amount:
-              </label>
-              <input
-                id="amount"
-                type="number"
-                placeholder="Enter amount"
-                class="px-3 py-2 border border-gray-300 dark:border-gray-600 w-96 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-100"
-              />
-            </div>
-            <button id="btn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Withdraw
-            </button>
-            <div class="grid grid-cols-3 gap-4">
-              <div class="bg-white dark:bg-gray-700 rounded-md p-4 flex flex-col items-center justify-center">
-                <img src="https://pngimagesfree.com/wp-content/uploads/500-rupees-png-1.png" alt="₹500 note" class="mb-2 w-20 h-10" />
-                <p class="text-gray-900 dark:text-gray-100 font-bold">₹500</p>
-                <p id="five" class="text-gray-900 dark:text-gray-100 font-bold"></p>
-              </div>
-              <div class="bg-white dark:bg-gray-700 rounded-md p-4 flex flex-col items-center justify-center">
-                <img src="https://pngimagesfree.com/wp-content/uploads/200-rupees-png-1.png" alt="₹200 note" class="mb-2 w-20 h-10" />
-                <p class="text-gray-900 dark:text-gray-100 font-bold">₹200</p>
-                <p id="two" class="text-gray-900 dark:text-gray-100 font-bold"></p>
-              </div>
-              <div class="bg-white dark:bg-gray-700 rounded-md p-4 flex flex-col items-center justify-center">
-                <img src="https://pngimagesfree.com/wp-content/uploads/100-rs-note-png-1.png" alt="₹100 note" class="mb-2 w-20 h-10" />
-                <p class="text-gray-900 dark:text-gray-100 font-bold">₹100</p>
-                <p id="one" class="text-gray-900 dark:text-gray-100 font-bold"></p>
-              </div>
-            </div>
-          </div>
+
+<div class="flex items-center justify-center h-screen bg-gray-900 dark:bg-gray-950">
+  <div class="w-full max-w-md bg-gray-950 dark:bg-gray-900 rounded-2xl shadow-md p-6">
+    <h1 class="text-2xl font-bold mb-4 text-gray-50 dark:text-gray-100">ATM Simulator</h1>
+    <div class="space-y-4">
+      <div class="flex items-center space-x-2">
+        <label for="amount" class="text-gray-400 dark:text-gray-300">
+          Enter Amount:
+        </label>
+        <input
+          class="flex h-10 w-full bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 px-3 py-2 border border-gray-600 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100"
+          id="amount"
+          placeholder="Enter amount"
+          type="number"
+        />
+      </div>
+      <button id="btn" class="inline-flex items-center justify-center whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Withdraw
+      </button>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-gray-800 dark:bg-gray-700 rounded-2xl p-4 flex flex-col items-center justify-center">
+          <img
+            src="https://pngimagesfree.com/wp-content/uploads/500-rupees-png-1.png"
+            alt="₹500 note"
+            class="mb-2 w-20 h-10"
+            width="80"
+            height="40"
+            style="aspect-ratio: 80 / 40; object-fit: cover;"
+          />
+          <p class="text-gray-50 dark:text-gray-100 font-bold">₹500</p>
+          <p id="five" class="text-gray-50 dark:text-gray-100 font-bold"></p>
+        </div>
+        <div class="bg-gray-800 dark:bg-gray-700 rounded-2xl p-4 flex flex-col items-center justify-center">
+          <img
+            src="https://pngimagesfree.com/wp-content/uploads/200-rupees-png-1.png"
+            alt="₹200 note"
+            class="mb-2 w-20 h-10"
+            width="80"
+            height="40"
+            style="aspect-ratio: 80 / 40; object-fit: cover;"
+          />
+          <p class="text-gray-50 dark:text-gray-100 font-bold">₹200</p>
+          <p id="two" class="text-gray-50 dark:text-gray-100 font-bold"></p>
+        </div>
+        <div class="bg-gray-800 dark:bg-gray-700 rounded-2xl p-4 flex flex-col items-center justify-center">
+          <img
+            src="https://pngimagesfree.com/wp-content/uploads/100-rs-note-png-1.png"
+            alt="₹100 note"
+            class="mb-2 w-20 h-10"
+            width="80"
+            height="40"
+            style="aspect-ratio: 80 / 40; object-fit: cover;"
+          />
+          <p class="text-gray-50 dark:text-gray-100 font-bold">₹100</p>
+          <p id="one" class="text-gray-50 dark:text-gray-100 font-bold"></p>
         </div>
       </div>
-
+    </div>
+  </div>
+</div>
       <script src="./js/script.js"></script>
 </body>
 </html>
